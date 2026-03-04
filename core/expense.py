@@ -28,6 +28,6 @@ class Expense:
             raise InvalidExpenseDateError(
                 "La fecha del gasto no puede ser posterior a hoy"
             )
-        
+
         if not self.title:
             raise EmptyTitleError("El título del gasto no puede estar vacío")

@@ -89,7 +89,7 @@ def test_create_multiple_expenses_and_list():
         - El número total de gastos en el sistema es exactamente dos, lo que verifica que no se sobrescriben ni se duplican registros al crear múltiples gastos.
     - Este test valida que la función de listado refleja fielmente todos los gastos registrados hasta el momento.
     """
-    
+
     service = create_service()
     service.create_expense("Pan", 3, "Mercado", date.today())
     service.create_expense("Leche", 4, "Supermercado", date.today())
@@ -111,7 +111,7 @@ def test_remove_expense_reduces_total():
           y que la operación no afecta otros registros.
     - La prueba valida tanto la integridad de la operación de borrado como la actualización exacta del listado.
     """
-    
+
     service = create_service()
     service.create_expense("Libro", 20, "", date.today())
     service.create_expense("Revista", 10, "", date.today())
@@ -142,7 +142,7 @@ def test_update_expense_partial_fields():
     assert updated_expense.title == "Camiseta"
     assert updated_expense.amount == 18
     assert updated_expense.description == "Ropa"
-    
+
 
 def test_total_amount_after_removal():
     """

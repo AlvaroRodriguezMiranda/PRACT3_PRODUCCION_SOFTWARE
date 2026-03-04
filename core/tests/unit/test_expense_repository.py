@@ -74,4 +74,3 @@ def test_get_by_id_returns_none_if_not_found():
     repo = InMemoryExpenseRepository()
     retrieved = repo.get_by_id(999)
     assert retrieved is None
-
